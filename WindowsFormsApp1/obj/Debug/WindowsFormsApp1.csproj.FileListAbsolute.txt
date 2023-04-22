@@ -1,0 +1,27 @@
+C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.More_option.textbox.resources
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.QuanLy.resources
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.QuanLyBanHang.resources
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Log_in.resources
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\ADMIN\OneDrive\Documents\Study\Hk2 2022-2023\Công nghệ phần mềm\lab\lab04\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.QuanLyNhanVien.resources

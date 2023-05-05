@@ -89,7 +89,7 @@
             this.textbox2.Name = "textbox2";
             this.textbox2.Padding = new System.Windows.Forms.Padding(7);
             this.textbox2.PasswordChar = true;
-            this.textbox2.Size = new System.Drawing.Size(337, 44);
+            this.textbox2.Size = new System.Drawing.Size(337, 40);
             this.textbox2.TabIndex = 13;
             this.textbox2.Texts = "";
             this.textbox2.UnderlinedStyle = true;
@@ -108,7 +108,7 @@
             this.txt_username.Name = "txt_username";
             this.txt_username.Padding = new System.Windows.Forms.Padding(7);
             this.txt_username.PasswordChar = false;
-            this.txt_username.Size = new System.Drawing.Size(337, 44);
+            this.txt_username.Size = new System.Drawing.Size(337, 40);
             this.txt_username.TabIndex = 12;
             this.txt_username.Tag = "";
             this.txt_username.Texts = "";
@@ -137,7 +137,7 @@
             // 
             // Log_in
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(874, 761);

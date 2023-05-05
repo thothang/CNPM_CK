@@ -54,10 +54,33 @@ namespace WindowsFormsApp1
 
         private void cssButton1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            QuanLy ql = new QuanLy();
-            ql.Closed += (s, args) => this.Close();
-            ql.Show();
+            string su = SecurityUtils.saltHash(textbox2.Texts);
+            UserModel model = new UserModel(txt_username.Texts,textbox2.Texts);
+            if (!model.CheckIfUserExists(ConnectionSingleton.GetConnection()))
+            {
+                MessageBox.Show("Sai ten dang nhap");
+            }
+            else if (!model.CheckPassword(ConnectionSingleton.GetConnection()))
+            {
+                MessageBox.Show("Sai Mat Khau");
+            }
+            else
+            {
+                if (txt_username.Texts == "Admin")
+                {
+                    this.Hide();
+                    QuanLy ql = new QuanLy();
+                    ql.Closed += (s, args) => this.Close();
+                    ql.Show();
+                }
+                else
+                {
+                    this.Hide();
+                    QuanLyBanHang qlbh = new QuanLyBanHang();
+                    qlbh.Closed += (s, args) => this.Close();
+                    qlbh.Show();
+                }
+            }  
         }
     }
 }

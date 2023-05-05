@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
 
         private void btnQLNH_Click(object sender, EventArgs e)
         {
-            
+            openChildForm(new QuanLyNhapHang());
         }
         #region QLSP
 
@@ -49,13 +49,13 @@ namespace WindowsFormsApp1
         }
         private void btnQLSP1_Click(object sender, EventArgs e)
         {
-            //code
+            openChildForm(new QuanLySanPham());
             hideSubMenu();
         }
 
         private void btnQLDM_Click(object sender, EventArgs e)
         {
-            //code
+            openChildForm(new QuanLyDanhMuc());
             hideSubMenu();
         }
         #endregion
@@ -67,13 +67,13 @@ namespace WindowsFormsApp1
 
         private void btn_TPXH_Click(object sender, EventArgs e)
         {
-            //code
+            openChildForm(new TaoPhieuXuathHang());
             hideSubMenu();
         }
 
         private void btn_TPTH_Click(object sender, EventArgs e)
         {
-            //code
+            openChildForm(new TaoPhieuTraHang());
             hideSubMenu();
         }
         #endregion
@@ -104,7 +104,7 @@ namespace WindowsFormsApp1
 
         private void btnQLKM_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new QuanLyKhuyenMai());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -115,6 +115,16 @@ namespace WindowsFormsApp1
         private void btnQLNV_Click(object sender, EventArgs e)
         {
             openChildForm(new QuanLyNhanVien());
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_TK_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ThongKe());
         }
     }
 }

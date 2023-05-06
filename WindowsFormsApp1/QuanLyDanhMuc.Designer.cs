@@ -47,8 +47,8 @@
             // 
             // btn_Sua
             // 
-            this.btn_Sua.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_Sua.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_Sua.BackColor = System.Drawing.Color.SeaGreen;
+            this.btn_Sua.BackgroundColor = System.Drawing.Color.SeaGreen;
             this.btn_Sua.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_Sua.BorderRadius = 20;
             this.btn_Sua.BorderSize = 0;
@@ -65,8 +65,8 @@
             // 
             // btn_Xoa
             // 
-            this.btn_Xoa.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_Xoa.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_Xoa.BackColor = System.Drawing.Color.Tomato;
+            this.btn_Xoa.BackgroundColor = System.Drawing.Color.Tomato;
             this.btn_Xoa.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_Xoa.BorderRadius = 20;
             this.btn_Xoa.BorderSize = 0;

@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyBanHang));
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tab_tracuuhoadon = new System.Windows.Forms.TabPage();
             this.btn_search = new WindowsFormsApp1.More_option.CssButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -71,6 +69,8 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tb_khachhang = new System.Windows.Forms.TabControl();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.tab_tracuuhoadon.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -81,12 +81,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tb_khachhang.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // tab_tracuuhoadon
             // 
@@ -229,6 +223,7 @@
             this.tab_laphoadon.Size = new System.Drawing.Size(1503, 644);
             this.tab_laphoadon.TabIndex = 0;
             this.tab_laphoadon.Text = "Lập hóa đơn";
+            this.tab_laphoadon.Click += new System.EventHandler(this.tab_laphoadon_Click);
             // 
             // bt_reset
             // 
@@ -238,7 +233,7 @@
             this.bt_reset.Name = "bt_reset";
             this.bt_reset.Size = new System.Drawing.Size(138, 47);
             this.bt_reset.TabIndex = 28;
-            this.bt_reset.Text = "Reset";
+            this.bt_reset.Text = "Tính Tiền";
             this.bt_reset.UseVisualStyleBackColor = false;
             this.bt_reset.Click += new System.EventHandler(this.bt_reset_Click);
             // 
@@ -291,6 +286,7 @@
             this.button5.TabIndex = 22;
             this.button5.Text = "In Hoá Đơn";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // dataGridView2
             // 
@@ -575,6 +571,20 @@
             this.tb_khachhang.TabIndex = 0;
             this.tb_khachhang.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage_1);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // QuanLyBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -607,7 +617,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TabPage tab_tracuuhoadon;
         private More_option.CssButton btn_search;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -648,6 +657,8 @@
         private More_option.textbox textbox5;
         private More_option.textbox textbox4;
         private More_option.textbox textbox3;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
 

@@ -108,6 +108,7 @@
     <Compile Include="QuanLyNhanVien.Designer.cs">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyNhanVienModal.cs" />
     <Compile Include="QuanLyNhapHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +121,7 @@
     <Compile Include="QuanLySanPham.Designer.cs">
       <DependentUpon>QuanLySanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLySanPhamModel.cs" />
     <Compile Include="SecurityUtils.cs" />
     <Compile Include="TaoPhieuTraHang.cs">
       <SubType>Form</SubType>
@@ -235,6 +237,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bluesky11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\265393499_103029968904302_4019471966525433794_n-removebg-preview1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

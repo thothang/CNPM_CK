@@ -40,11 +40,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 44);
+            this.dataGridView1.Location = new System.Drawing.Point(36, 356);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(931, 732);
+            this.dataGridView1.Size = new System.Drawing.Size(932, 461);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -58,9 +59,10 @@
             this.btnSalary.FlatAppearance.BorderSize = 0;
             this.btnSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalary.ForeColor = System.Drawing.Color.White;
-            this.btnSalary.Location = new System.Drawing.Point(1057, 684);
+            this.btnSalary.Location = new System.Drawing.Point(1035, 736);
+            this.btnSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalary.Name = "btnSalary";
-            this.btnSalary.Size = new System.Drawing.Size(242, 81);
+            this.btnSalary.Size = new System.Drawing.Size(171, 81);
             this.btnSalary.TabIndex = 4;
             this.btnSalary.Text = "Tính lương";
             this.btnSalary.TextColor = System.Drawing.Color.White;
@@ -76,7 +78,8 @@
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(1057, 324);
+            this.btnEdit.Location = new System.Drawing.Point(1107, 598);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(242, 81);
             this.btnEdit.TabIndex = 3;
@@ -86,15 +89,16 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.BackColor = System.Drawing.Color.Crimson;
-            this.btnRemove.BackgroundColor = System.Drawing.Color.Crimson;
+            this.btnRemove.BackColor = System.Drawing.Color.Tomato;
+            this.btnRemove.BackgroundColor = System.Drawing.Color.Tomato;
             this.btnRemove.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnRemove.BorderRadius = 20;
             this.btnRemove.BorderSize = 0;
             this.btnRemove.FlatAppearance.BorderSize = 0;
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(1057, 189);
+            this.btnRemove.Location = new System.Drawing.Point(1107, 472);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(242, 81);
             this.btnRemove.TabIndex = 2;
@@ -112,7 +116,8 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(1057, 58);
+            this.btnAdd.Location = new System.Drawing.Point(1107, 356);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(242, 81);
             this.btnAdd.TabIndex = 1;
@@ -130,13 +135,15 @@
             this.cssButton1.FlatAppearance.BorderSize = 0;
             this.cssButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cssButton1.ForeColor = System.Drawing.Color.White;
-            this.cssButton1.Location = new System.Drawing.Point(1057, 464);
+            this.cssButton1.Location = new System.Drawing.Point(1258, 735);
+            this.cssButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cssButton1.Name = "cssButton1";
-            this.cssButton1.Size = new System.Drawing.Size(242, 82);
+            this.cssButton1.Size = new System.Drawing.Size(171, 82);
             this.cssButton1.TabIndex = 5;
             this.cssButton1.Text = "Chấm công";
             this.cssButton1.TextColor = System.Drawing.Color.White;
             this.cssButton1.UseVisualStyleBackColor = false;
+            this.cssButton1.Click += new System.EventHandler(this.cssButton1_Click);
             // 
             // QuanLyNhanVien
             // 
@@ -150,6 +157,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QuanLyNhanVien";
             this.Text = "QuanLyNhanVien";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

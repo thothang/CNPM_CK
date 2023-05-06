@@ -29,11 +29,6 @@ namespace WindowsFormsApp1
             MaNSX = mansx;
         }
 
-
-
-
-
-
         public List<Dictionary<string, string>> FatchAllReader()
         {
             List<Dictionary<string, string>> rows = new List<Dictionary<string, string>>();

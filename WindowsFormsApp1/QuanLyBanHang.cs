@@ -8,6 +8,8 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Properties;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WindowsFormsApp1
 {
@@ -179,7 +181,11 @@ namespace WindowsFormsApp1
 
         private void button8_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            Log_in back= new Log_in();
+            back.Closed += (s, args) => this.Close();
+            back.Show();
+
         }
 
         private void label9_Click_1(object sender, EventArgs e)
@@ -214,8 +220,8 @@ namespace WindowsFormsApp1
 
         private void bt_reset_Click(object sender, EventArgs e)
         {
+            
             double sum = 0;
-
             for (int i = 0; i < dataGridView2.Rows.Count; i++)
             {
                 double quantity = Convert.ToDouble(dataGridView2.Rows[i].Cells[2].Value);
@@ -231,7 +237,8 @@ namespace WindowsFormsApp1
             }
             else 
             {
-                selectedItem = Convert.ToDouble(comboBox1.SelectedItem.ToString());
+                KhuyenMaiModel kmmodel = new KhuyenMaiModel(comboBox1.SelectedItem.ToString(),"");    
+                selectedItem = Convert.ToDouble(kmmodel.TiLeKhuyenMai(ConnectionSingleton.GetConnection()));
             }
             
             textbox3.Texts = sum.ToString();
@@ -246,6 +253,7 @@ namespace WindowsFormsApp1
             foreach (DataGridViewRow row in dataGridView2.SelectedRows)
             {
                 dataGridView2.Rows.RemoveAt(row.Index);
+                ResetData();
             }
         }
 
@@ -256,7 +264,7 @@ namespace WindowsFormsApp1
 
             foreach (Dictionary<string, string> row in data)
             {
-                comboBox1.Items.Add(row["TiLe"]);
+                comboBox1.Items.Add(row["MaKM"]);
             }
         }
 
@@ -275,7 +283,66 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+        }
+
+        private void printPreviewControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printDocument1_PrintPage_1(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+            Image image = Resources.logo;
+            e.Graphics.DrawImage(image, 180, 0, image.Width , image.Height);
+            e.Graphics.DrawString("HOA DON", new Font("Arial", 24, FontStyle.Regular), Brushes.Black, new Point(330, 520));
+            e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 580));
+            e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 610));
+            e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 640));
+            e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 670));
 
 
+
+            e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(330, 1400));
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ClearDataGridView();
+            textbox3.Texts = null;
+            textbox4.Texts = null;
+            textbox5.Texts = null;
+            textbox6.Texts = null;
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void tab_laphoadon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void ResetData()
+        {
+            dataGridView2.Rows.Clear();
+            dataGridView2.Refresh();
+        }
+
+        private void ClearDataGridView()
+        {
+            dataGridView2.Rows.Clear();
+            for (int i = dataGridView2.Rows.Count - 1; i >= 1; i--)
+            {
+                dataGridView2.Rows.RemoveAt(i);
+            }
+        }
     }
 }
+
+
+
+
+

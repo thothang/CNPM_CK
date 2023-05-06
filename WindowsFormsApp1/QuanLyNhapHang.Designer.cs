@@ -67,15 +67,15 @@
             // 
             // cssButton1
             // 
-            this.cssButton1.BackColor = System.Drawing.Color.SeaGreen;
-            this.cssButton1.BackgroundColor = System.Drawing.Color.SeaGreen;
+            this.cssButton1.BackColor = System.Drawing.Color.Tomato;
+            this.cssButton1.BackgroundColor = System.Drawing.Color.Tomato;
             this.cssButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cssButton1.BorderRadius = 20;
             this.cssButton1.BorderSize = 0;
             this.cssButton1.FlatAppearance.BorderSize = 0;
             this.cssButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cssButton1.ForeColor = System.Drawing.Color.White;
-            this.cssButton1.Location = new System.Drawing.Point(1160, 195);
+            this.cssButton1.Location = new System.Drawing.Point(1160, 164);
             this.cssButton1.Name = "cssButton1";
             this.cssButton1.Size = new System.Drawing.Size(242, 81);
             this.cssButton1.TabIndex = 3;
@@ -85,15 +85,15 @@
             // 
             // cssButton2
             // 
-            this.cssButton2.BackColor = System.Drawing.Color.SeaGreen;
-            this.cssButton2.BackgroundColor = System.Drawing.Color.SeaGreen;
+            this.cssButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cssButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.cssButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cssButton2.BorderRadius = 20;
             this.cssButton2.BorderSize = 0;
             this.cssButton2.FlatAppearance.BorderSize = 0;
             this.cssButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cssButton2.ForeColor = System.Drawing.Color.White;
-            this.cssButton2.Location = new System.Drawing.Point(1160, 346);
+            this.cssButton2.Location = new System.Drawing.Point(1160, 276);
             this.cssButton2.Name = "cssButton2";
             this.cssButton2.Size = new System.Drawing.Size(242, 81);
             this.cssButton2.TabIndex = 4;
@@ -111,13 +111,14 @@
             this.cssButton3.FlatAppearance.BorderSize = 0;
             this.cssButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cssButton3.ForeColor = System.Drawing.Color.White;
-            this.cssButton3.Location = new System.Drawing.Point(1160, 499);
+            this.cssButton3.Location = new System.Drawing.Point(1160, 607);
             this.cssButton3.Name = "cssButton3";
             this.cssButton3.Size = new System.Drawing.Size(242, 81);
             this.cssButton3.TabIndex = 5;
             this.cssButton3.Text = "Tạo hóa đơn";
             this.cssButton3.TextColor = System.Drawing.Color.White;
             this.cssButton3.UseVisualStyleBackColor = false;
+            this.cssButton3.Click += new System.EventHandler(this.cssButton3_Click);
             // 
             // cssButton4
             // 
@@ -129,7 +130,7 @@
             this.cssButton4.FlatAppearance.BorderSize = 0;
             this.cssButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cssButton4.ForeColor = System.Drawing.Color.White;
-            this.cssButton4.Location = new System.Drawing.Point(1160, 656);
+            this.cssButton4.Location = new System.Drawing.Point(1160, 714);
             this.cssButton4.Name = "cssButton4";
             this.cssButton4.Size = new System.Drawing.Size(242, 81);
             this.cssButton4.TabIndex = 6;

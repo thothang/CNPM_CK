@@ -15,10 +15,11 @@ namespace WindowsFormsApp1
             if (conn == null)
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder["Data Source"] = "KTEE\\SQLEXPRESS";
+                builder["Data Source"] = "MSI\\SQLEXPRESS";
                 builder["integrated Security"] = true;
-                builder["Initial Catalog"] = "CNPM";
-                builder.UserID = "KTEE\\ADMIN";
+                builder["Initial Catalog"] = "CNPM_CK";
+                builder.UserID = "sa";
+                builder.Password = "Thothang28@";
                 conn = new SqlConnection(builder.ConnectionString);
                 conn.Open();
                 return conn;

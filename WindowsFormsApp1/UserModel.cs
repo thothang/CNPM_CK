@@ -12,18 +12,20 @@ namespace WindowsFormsApp1
     {
         public string Users { get; set; }
         public string Passwords { get; set; }
+        public string MaNV { get; set; }
 
         public UserModel() { }
 
-        public UserModel(string users, string passwords)
+        public UserModel(string users, string passwords, string maNV)
         {
             Users = users;
             Passwords = passwords;
+            MaNV = maNV;
         }
 
         public bool CheckIfUserExists(SqlConnection connection)
         {
-            string query = "SELECT COUNT(*) FROM account WHERE @Users = users";
+            string query = "SELECT COUNT(*) FROM TaiKhoan WHERE @Users = users";
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 command.Parameters.AddWithValue("@Users", Users);
@@ -36,7 +38,7 @@ namespace WindowsFormsApp1
         {
             string su = SecurityUtils.saltHash(Passwords);
             Passwords = su;
-            string query = "SELECT COUNT(*) FROM account WHERE passwords = @Passwords";
+            string query = "SELECT COUNT(*) FROM TaiKhoan WHERE passwords = @Passwords";
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 command.Parameters.AddWithValue("@Passwords", Passwords);

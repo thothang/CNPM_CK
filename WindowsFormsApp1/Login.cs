@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
         private void cssButton1_Click(object sender, EventArgs e)
         {
             string su = SecurityUtils.saltHash(textbox2.Texts);
-            UserModel model = new UserModel(txt_username.Texts,textbox2.Texts);
+            UserModel model = new UserModel(txt_username.Texts,textbox2.Texts,"");
             if (!model.CheckIfUserExists(ConnectionSingleton.GetConnection()))
             {
                 MessageBox.Show("Sai ten dang nhap");

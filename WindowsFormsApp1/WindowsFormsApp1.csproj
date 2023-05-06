@@ -96,6 +96,7 @@
     <Compile Include="QuanLyDanhMuc.Designer.cs">
       <DependentUpon>QuanLyDanhMuc.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyDanhMucModal.cs" />
     <Compile Include="QuanLyKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>

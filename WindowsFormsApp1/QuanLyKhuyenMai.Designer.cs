@@ -38,6 +38,7 @@
             this.btn_Them = new WindowsFormsApp1.More_option.CssButton();
             this.btn_xoa = new WindowsFormsApp1.More_option.CssButton();
             this.btn_sua = new WindowsFormsApp1.More_option.CssButton();
+            this.Dangxuat = new WindowsFormsApp1.More_option.CssButton();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_KhuyenMai)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,8 +137,9 @@
             this.btn_Them.BorderSize = 0;
             this.btn_Them.FlatAppearance.BorderSize = 0;
             this.btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.ForeColor = System.Drawing.Color.White;
-            this.btn_Them.Location = new System.Drawing.Point(1064, 229);
+            this.btn_Them.Location = new System.Drawing.Point(1064, 336);
             this.btn_Them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(242, 81);
@@ -156,8 +158,9 @@
             this.btn_xoa.BorderSize = 0;
             this.btn_xoa.FlatAppearance.BorderSize = 0;
             this.btn_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xoa.ForeColor = System.Drawing.Color.White;
-            this.btn_xoa.Location = new System.Drawing.Point(1064, 444);
+            this.btn_xoa.Location = new System.Drawing.Point(1064, 458);
             this.btn_xoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(242, 81);
@@ -176,8 +179,9 @@
             this.btn_sua.BorderSize = 0;
             this.btn_sua.FlatAppearance.BorderSize = 0;
             this.btn_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sua.ForeColor = System.Drawing.Color.White;
-            this.btn_sua.Location = new System.Drawing.Point(1064, 652);
+            this.btn_sua.Location = new System.Drawing.Point(1064, 580);
             this.btn_sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(242, 81);
@@ -187,11 +191,32 @@
             this.btn_sua.UseVisualStyleBackColor = false;
             this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
+            // Dangxuat
+            // 
+            this.Dangxuat.BackColor = System.Drawing.Color.Crimson;
+            this.Dangxuat.BackgroundColor = System.Drawing.Color.Crimson;
+            this.Dangxuat.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.Dangxuat.BorderRadius = 20;
+            this.Dangxuat.BorderSize = 0;
+            this.Dangxuat.FlatAppearance.BorderSize = 0;
+            this.Dangxuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Dangxuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dangxuat.ForeColor = System.Drawing.Color.White;
+            this.Dangxuat.Location = new System.Drawing.Point(1064, 700);
+            this.Dangxuat.Name = "Dangxuat";
+            this.Dangxuat.Size = new System.Drawing.Size(242, 79);
+            this.Dangxuat.TabIndex = 16;
+            this.Dangxuat.Text = "Đăng xuất";
+            this.Dangxuat.TextColor = System.Drawing.Color.White;
+            this.Dangxuat.UseVisualStyleBackColor = false;
+            this.Dangxuat.Click += new System.EventHandler(this.Dangxuat_Click);
+            // 
             // QuanLyKhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1442, 844);
+            this.Controls.Add(this.Dangxuat);
             this.Controls.Add(this.textbox2);
             this.Controls.Add(this.textbox1);
             this.Controls.Add(this.label2);
@@ -225,5 +250,6 @@
         private System.Windows.Forms.Label label2;
         private More_option.textbox textbox1;
         private More_option.textbox textbox2;
+        private More_option.CssButton Dangxuat;
     }
 }

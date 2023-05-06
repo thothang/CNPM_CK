@@ -26,5 +26,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btn_InPXuat_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tính năng chưa phát triển :((");
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void btn_InPNhap_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tính năng chưa phát triển :((");
+        }
     }
 }

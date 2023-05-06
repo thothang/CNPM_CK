@@ -117,5 +117,13 @@ namespace WindowsFormsApp1
             }
             ResetData();
         }
+
+        private void Dangxuat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Log_in back = new Log_in();
+            back.Closed += (s, args) => this.Close();
+            back.Show();
+        }
     }
 }

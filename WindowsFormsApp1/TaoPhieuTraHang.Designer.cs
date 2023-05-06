@@ -93,13 +93,14 @@
             // 
             // btn_InPNhap
             // 
-            this.btn_InPNhap.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_InPNhap.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_InPNhap.BackColor = System.Drawing.Color.MediumPurple;
+            this.btn_InPNhap.BackgroundColor = System.Drawing.Color.MediumPurple;
             this.btn_InPNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_InPNhap.BorderRadius = 20;
             this.btn_InPNhap.BorderSize = 0;
             this.btn_InPNhap.FlatAppearance.BorderSize = 0;
             this.btn_InPNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_InPNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_InPNhap.ForeColor = System.Drawing.Color.White;
             this.btn_InPNhap.Location = new System.Drawing.Point(369, 625);
             this.btn_InPNhap.Name = "btn_InPNhap";
@@ -108,6 +109,7 @@
             this.btn_InPNhap.Text = "In phiếu nhập hàng";
             this.btn_InPNhap.TextColor = System.Drawing.Color.White;
             this.btn_InPNhap.UseVisualStyleBackColor = false;
+            this.btn_InPNhap.Click += new System.EventHandler(this.btn_InPNhap_Click);
             // 
             // TaoPhieuTraHang
             // 

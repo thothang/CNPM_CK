@@ -29,32 +29,14 @@
         private void InitializeComponent()
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btn_InPXuat = new WindowsFormsApp1.More_option.CssButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.GB_ThongTinXuat = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btn_InPXuat = new WindowsFormsApp1.More_option.CssButton();
             this.GB_ThongTinXuat.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btn_InPXuat
-            // 
-            this.btn_InPXuat.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_InPXuat.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_InPXuat.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_InPXuat.BorderRadius = 20;
-            this.btn_InPXuat.BorderSize = 0;
-            this.btn_InPXuat.FlatAppearance.BorderSize = 0;
-            this.btn_InPXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_InPXuat.ForeColor = System.Drawing.Color.White;
-            this.btn_InPXuat.Location = new System.Drawing.Point(419, 624);
-            this.btn_InPXuat.Name = "btn_InPXuat";
-            this.btn_InPXuat.Size = new System.Drawing.Size(509, 62);
-            this.btn_InPXuat.TabIndex = 0;
-            this.btn_InPXuat.Text = "In phiếu xuất hàng";
-            this.btn_InPXuat.TextColor = System.Drawing.Color.White;
-            this.btn_InPXuat.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -110,6 +92,26 @@
             this.label6.Size = new System.Drawing.Size(132, 25);
             this.label6.TabIndex = 3;
             this.label6.Text = "Số lượng xuất";
+            // 
+            // btn_InPXuat
+            // 
+            this.btn_InPXuat.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btn_InPXuat.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.btn_InPXuat.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_InPXuat.BorderRadius = 20;
+            this.btn_InPXuat.BorderSize = 0;
+            this.btn_InPXuat.FlatAppearance.BorderSize = 0;
+            this.btn_InPXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_InPXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_InPXuat.ForeColor = System.Drawing.Color.White;
+            this.btn_InPXuat.Location = new System.Drawing.Point(419, 624);
+            this.btn_InPXuat.Name = "btn_InPXuat";
+            this.btn_InPXuat.Size = new System.Drawing.Size(509, 62);
+            this.btn_InPXuat.TabIndex = 0;
+            this.btn_InPXuat.Text = "In phiếu xuất hàng";
+            this.btn_InPXuat.TextColor = System.Drawing.Color.White;
+            this.btn_InPXuat.UseVisualStyleBackColor = false;
+            this.btn_InPXuat.Click += new System.EventHandler(this.btn_InPXuat_Click);
             // 
             // TaoPhieuXuathHang
             // 

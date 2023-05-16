@@ -3,29 +3,35 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using WindowsFormsApp1.Properties;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+
 
 namespace WindowsFormsApp1
 {
     public partial class QuanLyBanHang : Form
     {
-        
+
         public QuanLyBanHang()
         {
             InitializeComponent();
-           
+
         }
 
 
         private void label1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -120,7 +126,7 @@ namespace WindowsFormsApp1
                 }
             }
         }
-        
+
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -172,7 +178,7 @@ namespace WindowsFormsApp1
 
         }
 
-        
+
 
         private void cssButton2_Click(object sender, EventArgs e)
         {
@@ -182,7 +188,7 @@ namespace WindowsFormsApp1
         private void button8_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Log_in back= new Log_in();
+            Log_in back = new Log_in();
             back.Closed += (s, args) => this.Close();
             back.Show();
 
@@ -192,6 +198,8 @@ namespace WindowsFormsApp1
         {
 
         }
+
+
 
 
         QuanLyBanHangModel QLBHMD = new QuanLyBanHangModel();
@@ -220,7 +228,7 @@ namespace WindowsFormsApp1
 
         private void bt_reset_Click(object sender, EventArgs e)
         {
-            
+
             double sum = 0;
             for (int i = 0; i < dataGridView2.Rows.Count; i++)
             {
@@ -235,17 +243,17 @@ namespace WindowsFormsApp1
             {
                 selectedItem = 0;
             }
-            else 
+            else
             {
-                KhuyenMaiModel kmmodel = new KhuyenMaiModel(comboBox1.SelectedItem.ToString(),"");    
+                KhuyenMaiModel kmmodel = new KhuyenMaiModel(comboBox1.SelectedItem.ToString(), "");
                 selectedItem = Convert.ToDouble(kmmodel.TiLeKhuyenMai(ConnectionSingleton.GetConnection()));
             }
-            
+
             textbox3.Texts = sum.ToString();
-            textbox4.Texts = (sum* selectedItem/100).ToString();
-            textbox5.Texts = (sum*0.01).ToString();
-            textbox6.Texts = (sum+sum*0.01- (sum * selectedItem / 100)).ToString();
-            
+            textbox4.Texts = (sum * selectedItem / 100).ToString();
+            textbox5.Texts = (sum * 0.01).ToString();
+            textbox6.Texts = (sum + sum * 0.01 - (sum * selectedItem / 100)).ToString();
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -295,29 +303,87 @@ namespace WindowsFormsApp1
 
         private void printDocument1_PrintPage_1(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-
-            Image image = Resources.logo;
-            e.Graphics.DrawImage(image, 180, 0, image.Width , image.Height);
-            e.Graphics.DrawString("HOA DON", new Font("Arial", 24, FontStyle.Regular), Brushes.Black, new Point(330, 520));
-            e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 580));
-            e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 610));
-            e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 640));
-            e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(25, 670));
-
-
-
-            e.Graphics.DrawString("Date: " + DateTime.Now.ToShortDateString(), new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(330, 1400));
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ClearDataGridView();
-            textbox3.Texts = null;
-            textbox4.Texts = null;
-            textbox5.Texts = null;
-            textbox6.Texts = null;
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
+            QuanLyHoaDonModel hoaDonModel = new QuanLyHoaDonModel();
+            if (dataGridView2.Rows.Count > 0)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "PDF (*.pdf)|*.pdf";
+                sfd.FileName = "Output.pdf";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            MessageBox.Show("Không thể ghi dữ liệu tới ổ đĩa. Mô tả lỗi:" + ex.Message);
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            PdfPTable pdfTable = new PdfPTable(dataGridView2.Columns.Count);
+                            pdfTable.DefaultCell.Padding = 3;
+                            pdfTable.WidthPercentage = 100;
+                            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                            foreach (DataGridViewColumn column in dataGridView2.Columns)
+                            {
+                                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                                pdfTable.AddCell(cell);
+                            }
+
+
+
+                            foreach (DataGridViewRow row in dataGridView2.Rows)
+                            {
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    if (cell.Value == null)
+                                    {
+
+                                    }
+                                    else
+                                    {
+                                        pdfTable.AddCell(cell.Value.ToString());
+                                    }
+
+                                }
+                            }
+
+                            using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
+                            {
+                                Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
+                                PdfWriter.GetInstance(pdfDoc, stream);
+                                pdfDoc.Open();
+                                pdfDoc.Add(pdfTable);
+                                pdfDoc.Close();
+                                stream.Close();
+                            }
+
+                            MessageBox.Show("Dữ liệu Export thành công!!!", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Mô tả lỗi :" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không có bản ghi nào được Export!!!", "Info");
+            }
         }
 
         private void tab_laphoadon_Click(object sender, EventArgs e)

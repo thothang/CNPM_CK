@@ -103,3 +103,6 @@ C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\Win
 C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Data.SqlClient.dll
 C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Data.SqlClient.xml
 C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\itextsharp.dll
+C:\Users\Nguyen Tho Thang\OneDrive\Desktop\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\itextsharp.xml

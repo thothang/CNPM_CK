@@ -103,6 +103,8 @@ namespace WindowsFormsApp1
         private void btnRemove_Click(object sender, EventArgs e)
         {
             QuanLyNhanVienModal qlnvmodel = new QuanLyNhanVienModal(textbox1.Texts, textbox2.Texts, textbox4.Texts, textbox3.Texts);
+            UserModel umodel = new UserModel("","", textbox1.Texts);
+            umodel.DeleteUsers(ConnectionSingleton.GetConnection());
             qlnvmodel.DeleteNhanVien(ConnectionSingleton.GetConnection());
             ResetData();
         }

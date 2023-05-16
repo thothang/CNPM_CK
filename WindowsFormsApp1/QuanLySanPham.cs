@@ -37,6 +37,7 @@ namespace WindowsFormsApp1
                 dataGridView1.Rows[index].Cells[0].Value = row["MaHH"];
                 dataGridView1.Rows[index].Cells[1].Value = row["TenHH"];
                 dataGridView1.Rows[index].Cells[2].Value = row["Gia"];
+                dataGridView1.Rows[index].Cells[3].Value = row["MaDM"];
             }
         }
 
@@ -49,7 +50,7 @@ namespace WindowsFormsApp1
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            QuanLySanPhamModel qlspmodel = new QuanLySanPhamModel(textbox1.Texts, textbox2.Texts, 0);
+            QuanLySanPhamModel qlspmodel = new QuanLySanPhamModel(textbox1.Texts, textbox2.Texts, 0, textbox4.Texts);
 
             try
             {
@@ -71,6 +72,7 @@ namespace WindowsFormsApp1
                 textbox1.Texts = "";
                 textbox2.Texts = "";
                 textbox3.Texts = "";
+                textbox4.Texts = "";
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -79,6 +81,7 @@ namespace WindowsFormsApp1
                 textbox1.Texts = "";
                 textbox2.Texts = "";
                 textbox3.Texts = "";
+                textbox4.Texts = "";
             }
 
             this.ResetData();
@@ -86,7 +89,7 @@ namespace WindowsFormsApp1
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            QuanLySanPhamModel qlspmodel = new QuanLySanPhamModel(textbox1.Texts,"",0);
+            QuanLySanPhamModel qlspmodel = new QuanLySanPhamModel(textbox1.Texts,"",0,"");
             qlspmodel.DeleteHangHoa(ConnectionSingleton.GetConnection());
             ResetData();
         }
@@ -99,21 +102,24 @@ namespace WindowsFormsApp1
                 textbox1.Texts = row.Cells[0].Value.ToString();
                 textbox2.Texts = row.Cells[1].Value.ToString();
                 textbox3.Texts = row.Cells[2].Value.ToString();
+                textbox4.Texts = row.Cells[3].Value.ToString();
             }
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            QuanLySanPhamModel qlspmodel = new QuanLySanPhamModel(textbox1.Texts, textbox2.Texts, float.Parse(textbox3.Texts));
+            QuanLySanPhamModel qlspmodel = new QuanLySanPhamModel(textbox1.Texts, textbox2.Texts, float.Parse(textbox3.Texts), textbox4.Texts);
             if (qlspmodel.CheckIfHangHoaExists(ConnectionSingleton.GetConnection()))
             {
                 qlspmodel.UpdateHangHoa(ConnectionSingleton.GetConnection());
             }
             else
             {
-                MessageBox.Show("Mã Khuyến Mãi Không Tồn Tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Mã Khuyến Sản Phẩm", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textbox1.Texts = null;
                 textbox2.Texts = null;
+                textbox3.Texts = null;
+                textbox4.Texts = null;
             }
             ResetData();
         }

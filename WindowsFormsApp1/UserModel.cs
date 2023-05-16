@@ -48,5 +48,16 @@ namespace WindowsFormsApp1
 
 
         }
+
+        public void DeleteUsers(SqlConnection connection)
+        {
+            string query = "DELETE FROM TaiKhoan WHERE @MaNV = MaNV";
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@MaNV", MaNV);
+                command.ExecuteScalar();
+            }
+        }
+
     }
 }

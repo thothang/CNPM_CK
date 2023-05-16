@@ -12,20 +12,23 @@ namespace WindowsFormsApp1
         public string MaHH { get; set; }
         public string TenHH { get; set; }
         public float Gia { get; set; }
+        public string MaDM { get; set; }
+
 
         public QuanLySanPhamModel() { }
-        public QuanLySanPhamModel(string mahh,string tenhh,float gia) 
+        public QuanLySanPhamModel(string mahh,string tenhh,float gia, string madm) 
         { 
             MaHH= mahh;
             TenHH= tenhh;   
             Gia= gia;
+            MaDM = madm;
         }
 
         public List<Dictionary<string, string>> FatchAllReader()
         {
             List<Dictionary<string, string>> rows = new List<Dictionary<string, string>>();
             Dictionary<string, string> column;
-            string sqlQuery = "SELECT MaHH, TenHH, Gia FROM HangHoa";
+            string sqlQuery = "SELECT MaHH, TenHH, Gia, MaDM FROM HangHoa";
             SqlCommand command = new SqlCommand(sqlQuery, ConnectionSingleton.GetConnection());
             try
             {
@@ -37,6 +40,7 @@ namespace WindowsFormsApp1
                     column["MaHH"] = reader["MaHH"].ToString();
                     column["TenHH"] = reader["TenHH"].ToString();
                     column["Gia"] = reader["Gia"].ToString();
+                    column["MaDM"] = reader["MaDM"].ToString();
                     rows.Add(column);
                 }
                 reader.Close();
@@ -50,13 +54,14 @@ namespace WindowsFormsApp1
 
         public void InsertHangHoa(SqlConnection connection)
         {
-            string query = "INSERT INTO HangHoa (MaHH, TenHH, Gia) " + "VALUES (@MaHH, @TenHH, @Gia)";
+            string query = "INSERT INTO HangHoa (MaHH, TenHH, Gia, MaDM) " + "VALUES (@MaHH, @TenHH, @Gia, @MaDM)";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 command.Parameters.AddWithValue("@MaHH", MaHH);
                 command.Parameters.AddWithValue("@TenHH", TenHH);
                 command.Parameters.AddWithValue("@Gia", Gia);
+                command.Parameters.AddWithValue("@MaDM", MaDM);
                 command.ExecuteNonQuery();
             }
         }
@@ -84,12 +89,13 @@ namespace WindowsFormsApp1
 
          public void UpdateHangHoa(SqlConnection connection)
          {
-             string query = "UPDATE HangHoa SET MaHH =@MaHH, TenHH= @TenHH , Gia =@Gia Where @MaHH = MaHH";
+             string query = "UPDATE HangHoa SET MaHH =@MaHH, TenHH= @TenHH , Gia =@Gia , MaDM = @MaDM Where @MaHH = MaHH";
              using (SqlCommand command = new SqlCommand(query, connection))
              {
                 command.Parameters.AddWithValue("@MaHH", MaHH);
                 command.Parameters.AddWithValue("@TenHH", TenHH);
                 command.Parameters.AddWithValue("@Gia", Gia);
+                command.Parameters.AddWithValue("@MaDM", MaDM);
                 command.ExecuteScalar();
 
              }
